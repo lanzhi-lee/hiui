@@ -47,6 +47,7 @@
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
     "@storybook/react": "^6.3.12",
+    "@types/lodash-es": "^4.17.12",
     "@typescript-eslint/eslint-plugin": "~4.10.0",
     "@typescript-eslint/parser": "^4.16.1",
     "autoprefixer": "^8.5.0",
@@ -121,6 +122,9 @@
     "stylelint-config-recommended-scss": "~4.2.0",
     "stylelint-config-standard": "~20.0.0",
     "stylelint-scss": "~3.18.0"
+  },
+  "resolutions": {
+    "@types/lodash": "4.17.5"
   },
   "engines": {
     "node": ">=12.22.1 <=14.21.3"
