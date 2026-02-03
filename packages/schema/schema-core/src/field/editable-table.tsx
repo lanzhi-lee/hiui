@@ -120,7 +120,6 @@ export class EditableTableFieldCreator<
         )
       })
       .Control({
-        // @ts-expect-error 忽略类型检查
         bodyCell: ({ rowData }) => ({ rowSpan: rowData[`_$rowSpan:${mainField}`] }),
       })
   }
@@ -132,7 +131,6 @@ export class EditableTableFieldCreator<
   HeaderAction(Component: FieldCustomHeaderActionComponent) {
     return this._mergeVal({
       extra: {
-        // @ts-expect-error 忽略类型检查
         headerActions: function EditableTableFieldCreatorHeaderAction(ctx) {
           // @ts-expect-error 忽略类型推导
           const el = <Component key="single-custom-header-action" {...ctx} />

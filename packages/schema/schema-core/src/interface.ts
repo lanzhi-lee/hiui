@@ -75,15 +75,21 @@ export interface SchemaDescriptionsProps {}
 export interface EditTableProps {}
 /* 可编辑上下文，由 schema-components 提供具体类型 */
 export interface DynamicEditableCtxType {}
-export interface FieldCustomHeaderActionsFn {}
+export interface FieldCustomHeaderActionsFn {
+  (...args: AnyArray): any
+}
 /* 表头自定义操作组件，由 schema-components 提供具体类型 */
 export interface FieldCustomHeaderActionComponent {}
 /* 内置排序函数名，由 schema-components 提供具体字面量 */
 export type BuiltInSortingFn = string
 /* 内置筛选函数名，由 schema-components 提供具体字面量 */
 export type BuiltInFilterFn = string
-export interface GetHeaderCellWrapperDynamicAttrsFnType {}
-export interface GetBodyCellWrapperDynamicAttrsFnType {}
+export interface GetHeaderCellWrapperDynamicAttrsFnType {
+  (...args: AnyArray): any
+}
+export interface GetBodyCellWrapperDynamicAttrsFnType {
+  (...args: AnyArray): any
+}
 export interface OpButtonRenderCtx<TData> {}
 export interface BottomRenderCtxType {}
 

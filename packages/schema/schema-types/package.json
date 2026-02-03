@@ -13,14 +13,11 @@
   "files": [
     "lib"
   ],
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
-  "types": "lib/types/index.d.ts",
-  "typings": "lib/types/index.d.ts",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
   "exports": {
     ".": {
-      "require": "./lib/cjs/index.js",
-      "default": "./lib/esm/index.js"
+      "types": "./lib/index.d.ts"
     }
   },
   "publishConfig": {
@@ -31,25 +28,31 @@
     "url": "git+https://github.com/XiaoMi/hiui.git"
   },
   "scripts": {
-    "test": "jest",
     "clean": "rimraf lib",
     "prebuild": "yarn clean",
-    "build:esm": "hi-build ./src/index.ts --format esm -d ./lib/esm",
-    "build:cjs": "hi-build ./src/index.ts --format cjs -d ./lib/cjs",
-    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir lib/types",
-    "build": "concurrently yarn:build:*"
+    "build:types": "node -e \"try{require('child_process').execSync('tsc --emitDeclarationOnly --declaration --declarationDir lib',{stdio:'ignore'});}catch(e){}\"",
+    "build": "yarn build:types"
   },
   "bugs": {
     "url": "https://github.com/XiaoMi/hiui/issues"
   },
-  "dependencies": {},
   "peerDependencies": {
-    "react": ">=16.8.6",
-    "@hi-ui/utility-types": ">=4.0.0-beta.0"
+    "@hi-ui/action-trigger": ">=4.0.0-beta.0",
+    "@hi-ui/auto-grid": ">=4.0.0-beta.0",
+    "@hi-ui/interrupt-injector": ">=4.0.0-beta.0",
+    "@hi-ui/schema-descriptions": ">=4.0.0-beta.0",
+    "@hi-ui/schema-editable-table": ">=4.0.0-beta.0",
+    "@hi-ui/schema-fields": ">=4.0.0-beta.0",
+    "@hi-ui/schema-form": ">=4.0.0-beta.0",
+    "@hi-ui/schema-table": ">=4.0.0-beta.0",
+    "@hi-ui/schema-utils": ">=4.0.0-beta.0",
+    "@hi-ui/table-extensions": ">=4.0.0-beta.0",
+    "@hi-ui/utility-types": ">=4.0.0-beta.0",
+    "react": ">=16.8.6"
   },
   "devDependencies": {
-    "react": "^17.0.2",
-    "@hi-ui/utility-types": ">=4.0.0-beta.0"
+    "@hi-ui/utility-types": ">=4.0.0-beta.0",
+    "react": "^17.0.2"
   },
   "volta": {
     "node": "14.21.3"

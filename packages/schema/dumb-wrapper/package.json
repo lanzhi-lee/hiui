@@ -34,22 +34,26 @@
     "test": "jest",
     "clean": "rimraf lib",
     "prebuild": "yarn clean",
-    "build:esm": "hi-build ./src/index.ts --format esm -d ./lib/esm",
-    "build:cjs": "hi-build ./src/index.ts --format cjs -d ./lib/cjs",
+    "build:esm": "hi-build ./src/index.tsx --format esm -d ./lib/esm",
+    "build:cjs": "hi-build ./src/index.tsx --format cjs -d ./lib/cjs",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir lib/types",
     "build": "concurrently yarn:build:*"
   },
   "bugs": {
     "url": "https://github.com/XiaoMi/hiui/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@hi-ui/schema-utils": ">=4.0.0-beta.0",
+    "ahooks": "^3.9.6",
+    "lodash-es": "^4.17.23"
+  },
   "peerDependencies": {
-    "react": ">=16.8.6",
-    "@hi-ui/utility-types": ">=4.0.0-beta.0"
+    "@hi-ui/utility-types": ">=4.0.0-beta.0",
+    "react": ">=16.8.6"
   },
   "devDependencies": {
-    "react": "^17.0.2",
-    "@hi-ui/utility-types": ">=4.0.0-beta.0"
+    "@hi-ui/utility-types": ">=4.0.0-beta.0",
+    "react": "^17.0.2"
   },
   "volta": {
     "node": "14.21.3"

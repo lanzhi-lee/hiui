@@ -43,13 +43,12 @@ import type { FieldRendererType } from './abstract'
 export type ValueTypePresets = keyof BuiltinFieldMapType
 export type ValueType = LiteralUnion<ValueTypePresets>
 
-export type FormDependencyFieldsCtx<TData extends AnyObject = AnyObject> = DependencyRenderCtx<
-  TData
-> & {
-  formRef: EnhancedFormRefType<TData>
-  /** 父字段的数据索引 */
-  parentDataIndex?: FormFieldDataIndexType
-}
+export type FormDependencyFieldsCtx<TData extends AnyObject = AnyObject> =
+  DependencyRenderCtx<TData> & {
+    formRef: EnhancedFormRefType<TData>
+    /** 父字段的数据索引 */
+    parentDataIndex?: FormFieldDataIndexType
+  }
 
 /**
  * 依赖字段创建函数
@@ -401,7 +400,7 @@ export type FieldPayloadType = {
   /** 是否需要更新 */
   shouldUpdate?: boolean
   /** 设置下拉类型组件的选中值，用于在渲染时获取选中值的显示文本 */
-  setSelectedRawOption?: (value: AnyObject) => void
+  setSelectedRawOption?: (values?: AnyObject) => void
 }
 
 // 有点过于类型体操了，实际作用是：

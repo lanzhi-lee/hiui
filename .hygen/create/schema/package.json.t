@@ -47,12 +47,12 @@ to: <%= h.schemaDir(`${name}/package.json`) %>
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": ">=16.8.6",
-    "@hi-ui/utility-types": ">=4.0.0-beta.0"
+    "@hi-ui/utility-types": ">=4.0.0-beta.0",
+    "react": ">=16.8.6"
   },
   "devDependencies": {
-    "react": "^17.0.2",
-    "@hi-ui/utility-types": ">=4.0.0-beta.0"
+    "@hi-ui/utility-types": ">=4.0.0-beta.0",
+    "react": "^17.0.2"
   },
   "volta": {
     "node": "14.21.3"

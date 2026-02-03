@@ -50,6 +50,7 @@
     "@hi-ui/classname": "^4.0.5",
     "@hi-ui/utility-types": "4.0.0-beta.0",
     "decimal.js": "^10.6.0",
-    "lodash-es": "^4.17.23"
+    "lodash-es": "^4.17.23",
+    "react": "^17.0.2"
   }
 }
