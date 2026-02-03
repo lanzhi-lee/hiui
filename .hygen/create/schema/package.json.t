@@ -45,6 +45,16 @@ to: <%= h.schemaDir(`${name}/package.json`) %>
   "bugs": {
     "url": "https://github.com/XiaoMi/hiui/issues"
   },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": ">=16.8.6",
+    "@hi-ui/utility-types": ">=4.0.0-beta.0"
+  },
   "devDependencies": {
+    "react": "^17.0.2",
+    "@hi-ui/utility-types": ">=4.0.0-beta.0"
+  },
+  "volta": {
+    "node": "14.21.3"
   }
 }
